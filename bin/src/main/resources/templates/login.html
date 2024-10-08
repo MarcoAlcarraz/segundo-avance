@@ -11,12 +11,20 @@
 		<div class="container mt-5 p-5">
 			<div class="row">
 				<div class="col-md-6 p-5">
+<<<<<<< HEAD
 					<img src="img/mueb.jpg" class="d-block w-150" alt="Imagen 5" height="300px">
+=======
+					<img alt="" src="img/ecom.png" width="100%" height="400px">
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 				</div>
 				<div class="col-md-6 mt-3 p-5">
 					<div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
 						<div class="card-header">
+<<<<<<< HEAD
 							<p class="fs-4 text-center">Iniciar Sesión</p>
+=======
+							<p class="fs-4 text-center">Login</p>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 							<div th:if="${param.error}"
 								class="alert alert-danger text-center">
 
@@ -25,30 +33,57 @@
 									[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]
 								</th:block>
 
+<<<<<<< HEAD
 							</div>
 
 							<div th:if="${param.logout}" class="alert alert-success">
 								Cierre de sesión exitoso</div>
+=======
+
+
+							</div>
+
+							<div th:if="${param.logout}" class="alert alert-success">
+								Logout Sucessfully</div>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 						</div>
 						<div class="card-body">
 							<form action="/login" method="post">
 								<div class="mb-3">
+<<<<<<< HEAD
 									<label class="form-label">Correo Electrónico</label> <input required
+=======
+									<label class="form-label">Email</label> <input required
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 										class="form-control" name="username" type="email">
 								</div>
 
 								<div class="mb-3">
+<<<<<<< HEAD
 									<label class="form-label">Contraseña</label> <input required
 										class="form-control" name="password" type="password">
 								</div>
 								<button type="submit"
 									class="btn bg-primary text-white col-md-12">Iniciar Sesión</button>
+=======
+									<label class="form-label">Password</label> <input required
+										class="form-control" name="password" type="password">
+								</div>
+								<button type="submit"
+									class="btn bg-primary text-white col-md-12">Login</button>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 							</form>
 						</div>
 
 						<div class="card-footer text-center">
+<<<<<<< HEAD
 							<a href="/forgot-password" class="text-decoration-none">Olvidé mi Contraseña</a><br>
 							¿No tienes una cuenta? <a href="/register" class="text-decoration-none">Crea una</a>
+=======
+							<a href="/forgot-password" class="text-decoration-none">Forgot Password</a><br>
+							Don't have an account ? <a href="#" class="text-decoration-none">Create
+								one </a>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 						</div>
 					</div>
 				</div>
@@ -57,4 +92,8 @@
 
 	</section>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de

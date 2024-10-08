@@ -1,21 +1,37 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="es" xmlns:th="http://www.thymeleaf.org"
 	th:replace="~{base::layout(~{::section})}">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insertar título aquí</title>
+=======
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 </head>
 <body>
 	<section>
 		<div class="container mt-5 p-5">
 			<div class="row">
 				<div class="col-md-5 p-5">
+<<<<<<< HEAD
 					<img src="img/fino1.jpg" class="d-block w-150" alt="Imagen 5" height="300px">
+=======
+					<img alt="" src="img/ecom.png" width="100%" height="400px">
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 				</div>
 				<div class="col-md-7 p-2">
 					<div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
 						<div class="card-header text-center">
+<<<<<<< HEAD
 							<p class="fs-4 text-center">Registro</p>
+=======
+							<p class="fs-4 text-center">Register</p>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 							<th:block th:if="${session.succMsg}">
 								<p class="text-success fw-bold">[[${session.succMsg}]]</p>
 								<th:block th:text="${@commnServiceImpl.removeSessionMessage()}"></th:block>
@@ -31,12 +47,20 @@
 								method="post">
 								<div class="row">
 									<div class="col">
+<<<<<<< HEAD
 										<label class="form-label">Nombre Completo</label> <input required
+=======
+										<label class="form-label">Full Name</label> <input required
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 											class="form-control" name="name" type="text">
 									</div>
 
 									<div class="col">
+<<<<<<< HEAD
 										<label class="form-label">Número de Teléfono</label> <input
+=======
+										<label class="form-label">Mobile Number</label> <input
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 											required class="form-control" name="mobileNumber"
 											type="number">
 									</div>
@@ -44,19 +68,31 @@
 								</div>
 
 								<div class="mb-3">
+<<<<<<< HEAD
 									<label class="form-label">Correo Electrónico</label> <input required
+=======
+									<label class="form-label">Email</label> <input required
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 										class="form-control" name="email" type="email">
 								</div>
 
 
 								<div class="row">
 									<div class="col">
+<<<<<<< HEAD
 										<label class="form-label">Dirección</label> <input required
+=======
+										<label class="form-label">Address</label> <input required
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 											class="form-control" name="address" type="text">
 									</div>
 
 									<div class="col">
+<<<<<<< HEAD
 										<label class="form-label">Ciudad</label> <input required
+=======
+										<label class="form-label">City</label> <input required
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 											class="form-control" name="city" type="text">
 									</div>
 
@@ -64,12 +100,20 @@
 
 								<div class="row">
 									<div class="col">
+<<<<<<< HEAD
 										<label class="form-label">Estado</label> <input required
+=======
+										<label class="form-label">State</label> <input required
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 											class="form-control" name="state" type="text">
 									</div>
 
 									<div class="col">
+<<<<<<< HEAD
 										<label class="form-label">Código Postal</label> <input required
+=======
+										<label class="form-label">Pincode</label> <input required
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 											class="form-control" name="pincode" type="number">
 									</div>
 
@@ -78,12 +122,20 @@
 
 								<div class="row">
 									<div class="col">
+<<<<<<< HEAD
 										<label class="form-label">Contraseña</label> <input required
+=======
+										<label class="form-label">Password</label> <input required
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 											class="form-control" name="password" type="password" id="pass">
 									</div>
 
 									<div class="col">
+<<<<<<< HEAD
 										<label class="form-label">Confirmar Contraseña</label> <input
+=======
+										<label class="form-label">Confirm Password</label> <input
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 											required class="form-control" name="confirmpassword"
 											type="password">
 									</div>
@@ -93,18 +145,36 @@
 
 
 								<div class="mb-3">
+<<<<<<< HEAD
 									<label class="form-label">Imagen de Perfil</label> <input
 										class="form-control" name="img" type="file">
 								</div>
 
 								<button type="submit"
 									class="btn bg-primary text-white col-md-12">Registrarse</button>
+=======
+									<label class="form-label">Profile Image</label> <input
+										class="form-control" name="img" type="file">
+								</div>
+
+
+
+
+
+
+								<button type="submit"
+									class="btn bg-primary text-white col-md-12">Register</button>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 							</form>
 						</div>
 
 						<div class="card-footer text-center">
 
+<<<<<<< HEAD
 							¿Ya tienes una cuenta? <a href="/signin" class="text-decoration-none">Iniciar Sesión
+=======
+							have an account ? <a href="/login" class="text-decoration-none">Login
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 							</a>
 						</div>
 					</div>
@@ -114,4 +184,8 @@
 
 	</section>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de

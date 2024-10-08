@@ -1,18 +1,33 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="es" xmlns:th="http://www.thymeleaf.org"
 	th:replace="~{base::layout(~{::section})}">
 <head>
 <meta charset="ISO-8859-1">
 <title></title>
+=======
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 </head>
 <body>
 	<section>
 		<div class="container-fluid mt-5 p-1">
 			<div class="row">
+<<<<<<< HEAD
 				<p class="text-center fs-3 mt-2">Todas Las Órdenes</p>
 				<hr>
 				<a href="/admin/" class="text-decoration-none"><i
 					class="fa-solid fa-arrow-left"></i> Atrás</a>
+=======
+				<p class="text-center fs-3 mt-2">All Orders</p>
+				<hr>
+				<a href="/admin/" class="text-decoration-none"><i
+					class="fa-solid fa-arrow-left"></i> Back</a>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 				<th:block th:if="${session.succMsg}">
 					<p class="text-success fw-bold text-center">[[${session.succMsg}]]</p>
 					<th:block th:text="${@commnServiceImpl.removeSessionMessage()}"></th:block>
@@ -27,11 +42,19 @@
 					<form action="/admin/search-order" method="get">
 						<div class="row">
 							<div class="col">
+<<<<<<< HEAD
 								<input type="text" class="form-control" name="orderId"
 									placeholder="Introduzca el ID de la orden">
 							</div>
 							<div class="col">
 								<button class="btn btn-primary col">Buscar</button>
+=======
+								<input type="text" class="form-control " name="orderId"
+									placeholder="Enter order id">
+							</div>
+							<div class="col">
+								<button class="btn btn-primary col">Search</button>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 							</div>
 						</div>
 					</form>
@@ -42,6 +65,7 @@
 					<table class="table table-bordered card-sh">
 						<thead class="table-light">
 							<tr>
+<<<<<<< HEAD
 								<th scope="col">ID de la Orden</th>
 								<th scope="col">Detalles de Entrega</th>
 								<th scope="col">Fecha</th>
@@ -49,6 +73,15 @@
 								<th scope="col">Precio</th>
 								<th scope="col">Estado</th>
 								<th scope="col">Acción</th>
+=======
+								<th scope="col">Order Id</th>
+								<th scope="col">Deliver Details</th>
+								<th scope="col">Date</th>
+								<th scope="col">Product Details</th>
+								<th scope="col">Price</th>
+								<th scope="col">Status</th>
+								<th scope="col">Action</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 							</tr>
 						</thead>
 						<tbody>
@@ -57,6 +90,7 @@
 									<tr>
 										<th scope="row">[[${orderDtls.orderId}]]</th>
 
+<<<<<<< HEAD
 										<td>Nombre: [[${orderDtls.orderAddress.firstName+' '+orderDtls.orderAddress.lastName}]]<br> 
 											Correo: [[${orderDtls.orderAddress.email}]] <br> 
 											Teléfono: [[${orderDtls.orderAddress.mobileNo}]] <br> 
@@ -70,12 +104,33 @@
 										<td>Cantidad: [[${orderDtls.quantity}]] <br>Precio: 
 											[[${orderDtls.price}]] <br>Precio Total:
 											[[${orderDtls.quantity * orderDtls.price}]]</td>
+=======
+										<td>Name : [[${orderDtls.orderAddress.firstName+'
+											'+orderDtls.orderAddress.lastName}]]<br> Email :
+											[[${orderDtls.orderAddress.email}]] <br> Mobno:
+											[[${orderDtls.orderAddress.mobileNo}]] <br> Address :
+											[[${orderDtls.orderAddress.address}]] <br> City :
+											[[${orderDtls.orderAddress.city}]] <br> State :
+											[[${orderDtls.orderAddress.state}]],
+											[[${orderDtls.orderAddress.pincode}]]
+
+
+
+										</td>
+										<td>[[${orderDtls.orderDate}]]</td>
+										<td>[[${orderDtls.product.title}]]</td>
+										<td>Quantity : [[${orderDtls.quantity}]] <br>Price :
+											[[${orderDtls.price}]] <br>Total Price
+											:[[${orderDtls.quantity * orderDtls.price}]]
+										</td>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 										<td>[[${orderDtls.status}]]</td>
 										<td>
 											<form action="/admin/update-order-status" method="post">
 												<div class="row">
 													<div class="col">
 														<select class="form-control" name="st">
+<<<<<<< HEAD
 															<option>--seleccionar--</option>
 															<option value="1">En Proceso</option>
 															<option value="2">Orden Recibida</option>
@@ -83,16 +138,38 @@
 															<option value="4">En Camino</option>
 															<option value="5">Entregado</option>
 															<option value="6">Cancelado</option>
+=======
+															<option>--select--</option>
+															<option value="1">In Progress</option>
+															<option value="2">Order Received</option>
+															<option value="3">Product Packed</option>
+															<option value="4">Out for Delivery</option>
+															<option value="5">Delivered</option>
+															<option value="6">Cancelled</option>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 														</select>
 													</div>
 													<input th:value="${orderDtls.id}" name="id" type="hidden">
 													<div class="col">
+<<<<<<< HEAD
 														<th:block th:if="${orderDtls.status=='Cancelled' || orderDtls.status=='Delivered'}">
 															<button class="btn btn-primary btn-sm col disabled">Actualizar</button>
 														</th:block>
 														<th:block th:unless="${orderDtls.status=='Cancelled' || orderDtls.status=='Delivered'}">
 															<button class="btn btn-sm btn-primary ">Actualizar</button>
 														</th:block>
+=======
+														<th:block
+															th:if="${orderDtls.status=='Cancelled' || orderDtls.status=='Delivered'}">
+															<button class="btn btn-primary btn-sm col disabled">Update</button>
+														</th:block>
+														<th:block
+															th:unless="${orderDtls.status=='Cancelled' || orderDtls.status=='Delivered'}">
+															<button class="btn btn-sm btn-primary ">Update</button>
+														</th:block>
+
+
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 													</div>
 												</div>
 											</form>
@@ -108,6 +185,7 @@
 								<tr th:each="o:${orders}">
 									<th scope="row">[[${o.orderId}]]</th>
 
+<<<<<<< HEAD
 									<td>Nombre: [[${o.orderAddress.firstName+' '+o.orderAddress.lastName}]]<br> 
 										Correo: [[${o.orderAddress.email}]] <br> 
 										Teléfono: [[${o.orderAddress.mobileNo}]] <br> 
@@ -119,12 +197,32 @@
 									<td>[[${o.product.title}]]</td>
 									<td>Cantidad: [[${o.quantity}]] <br>Precio: 
 										[[${o.price}]] <br>Precio Total: [[${o.quantity * o.price}]]</td>
+=======
+									<td>Name : [[${o.orderAddress.firstName+'
+										'+o.orderAddress.lastName}]]<br> Email :
+										[[${o.orderAddress.email}]] <br> Mobno:
+										[[${o.orderAddress.mobileNo}]] <br> Address :
+										[[${o.orderAddress.address}]] <br> City :
+										[[${o.orderAddress.city}]] <br> State :
+										[[${o.orderAddress.state}]], [[${o.orderAddress.pincode}]]
+
+
+
+									</td>
+									<td>[[${o.orderDate}]]</td>
+									<td>[[${o.product.title}]]</td>
+									<td>Quantity : [[${o.quantity}]] <br>Price :
+										[[${o.price}]] <br>Total Price :[[${o.quantity *
+										o.price}]]
+									</td>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									<td>[[${o.status}]]</td>
 									<td>
 										<form action="/admin/update-order-status" method="post">
 											<div class="row">
 												<div class="col">
 													<select class="form-control" name="st">
+<<<<<<< HEAD
 														<option>--seleccionar--</option>
 														<option value="1">En Proceso</option>
 														<option value="2">Orden Recibida</option>
@@ -132,15 +230,34 @@
 														<option value="4">En Camino</option>
 														<option value="5">Entregado</option>
 														<option value="6">Cancelado</option>
+=======
+														<option>--select--</option>
+														<option value="1">In Progress</option>
+														<option value="2">Order Received</option>
+														<option value="3">Product Packed</option>
+														<option value="4">Out for Delivery</option>
+														<option value="5">Delivered</option>
+														<option value="6">Cancelled</option>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 													</select>
 												</div>
 												<input th:value="${o.id}" name="id" type="hidden">
 												<div class="col">
+<<<<<<< HEAD
 													<th:block th:if="${o.status=='Cancelled' || o.status=='Delivered'}">
 														<button class="btn btn-primary btn-sm col disabled">Actualizar</button>
 													</th:block>
 													<th:block th:unless="${o.status=='Cancelled' || o.status=='Delivered'}">
 														<button class="btn btn-sm btn-primary ">Actualizar</button>
+=======
+													<th:block
+														th:if="${o.status=='Cancelled' || o.status=='Delivered'}">
+														<button class="btn btn-primary btn-sm col disabled">Update</button>
+													</th:block>
+													<th:block
+														th:unless="${o.status=='Cancelled' || o.status=='Delivered'}">
+														<button class="btn btn-sm btn-primary ">Update</button>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 													</th:block>
 												</div>
 											</div>
@@ -152,6 +269,7 @@
 					</table>
 					<th:block th:if="${!srch}">
 						<div class="row">
+<<<<<<< HEAD
 							<div class="col-md-4">Total de Órdenes: [[${totalElements}]]</div>
 							<div class="col-md-6">
 
@@ -175,6 +293,31 @@
 												<span aria-hidden="true">&raquo;</span>
 											</a>
 										</li>
+=======
+							<div class="col-md-4">Total Orders : [[${totalElements}]]</div>
+							<div class="col-md-6">
+
+								<nav aria-label="Page navigation example">
+									<ul class="pagination">
+										<li class="page-item"
+											th:classappend="${isFirst} ? 'disabled':''"><a
+											class="page-link"
+											th:href="@{'/admin/orders?pageNo='+${pageNo-1}}"
+											aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
+										</a></li>
+
+										<li th:each="i:${#numbers.sequence(1,totalPages)}"
+											class="page-item" th:classappend="${pageNo+1==i}?'active':''"
+											]]><a class="page-link"
+											th:href="@{'/admin/orders?pageNo='+${i-1}}">[[${i}]]</a></li>
+
+										<li class="page-item"
+											th:classappend="${isLast} ? 'disabled':''"><a
+											class="page-link"
+											th:href="@{'/admin/orders?pageNo='+${pageNo+1}}"
+											aria-label="Next"> <span aria-hidden="true">&raquo;</span>
+										</a></li>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									</ul>
 								</nav>
 							</div>
@@ -187,3 +330,7 @@
 		</div>
 	</section>
 </body>
+<<<<<<< HEAD
+=======
+</html>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de

@@ -1,9 +1,17 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="es" xmlns:th="http://www.thymeleaf.org"
 	th:replace="~{base::layout(~{::section})}">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insertar título aquí</title>
+=======
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 </head>
 <body>
 	<section>
@@ -11,8 +19,13 @@
 
 			<div class="card card-sh">
 				<div class="card-header text-center">
+<<<<<<< HEAD
 					<p class="fs-4" th:if="${userType==1}">Usuarios</p>
 					<p class="fs-4" th:if="${userType==2}">Administrador</p>
+=======
+					<p class="fs-4" th:if="${userType==1}">Users</p>
+					<p class="fs-4" th:if="${userType==2}">Admin</p>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 					<th:block th:if="${session.succMsg}">
 						<p class="text-success fw-bold">[[${session.succMsg}]]</p>
 						<th:block th:text="${@commnServiceImpl.removeSessionMessage()}"></th:block>
@@ -27,6 +40,7 @@
 					<table class="table">
 						<thead>
 							<tr>
+<<<<<<< HEAD
 								<th scope="col">N°</th>
 								<th scope="col">Perfil</th>
 								<th scope="col">Nombre</th>
@@ -35,6 +49,16 @@
 								<th scope="col">Dirección</th>
 								<th scope="col">Estado</th>
 								<th scope="col">Acción</th>
+=======
+								<th scope="col">Sl No</th>
+								<th scope="col">Profile</th>
+								<th scope="col">Name</th>
+								<th scope="col">Email</th>
+								<th scope="col">Mobile No</th>
+								<th scope="col">Address</th>
+								<th scope="col">Status</th>
+								<th scope="col">Action</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 							</tr>
 						</thead>
 						<tbody>
@@ -48,12 +72,20 @@
 								<td>[[${u.address+','+u.city+','+u.state+','+u.pincode}]]</td>
 								<td>[[${u.isEnable}]]</td>
 								<td><a th:href="@{'/admin/updateSts?status=true&id='+${u.id}}+'&type='+${userType}"
+<<<<<<< HEAD
 									class="btn btn-sm btn-primary">Activo</a> 
+=======
+									class="btn btn-sm btn-primary">Active</a> 
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 										
 									<a
 									th:href="@{'/admin/updateSts?status=false&id='+${u.id}}+'&type='+${userType}"
 									class="btn btn-sm btn-danger">
+<<<<<<< HEAD
 										Inactivo</a></td>
+=======
+										Inactive</a></td>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 							</tr>
 
 						</tbody>
@@ -64,4 +96,8 @@
 
 	</section>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de

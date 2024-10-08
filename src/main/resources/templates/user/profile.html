@@ -1,9 +1,17 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="es" xmlns:th="http://www.thymeleaf.org"
 	th:replace="~{base::layout(~{::section})}">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insertar título aquí</title>
+=======
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 </head>
 <body>
 	<section>
@@ -11,7 +19,11 @@
 			<div class="row">
 				<div class="col-md-10 offset-md-1 ">
 
+<<<<<<< HEAD
 					<p class="fs-3 text-center">Mi Perfil</p>
+=======
+					<p class="fs-3 text-center">My Profile</p>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 					<th:block th:if="${session.succMsg}">
 						<p class="text-success fw-bold  text-center">[[${session.succMsg}]]</p>
 						<th:block th:text="${@commnServiceImpl.removeSessionMessage()}"></th:block>
@@ -34,61 +46,101 @@
 								<form action="/user/update-profile" method="post"
 									enctype="multipart/form-data">
 								<tr>
+<<<<<<< HEAD
 									<th scope="row">Nombre</th>
+=======
+									<th scope="row">Name</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									<td>:</td>
 									<td><input type="text" name="name" class="form-control"
 										th:value="${user.name}"></td>
 								</tr>
 								<tr>
+<<<<<<< HEAD
 									<th scope="row">Número de Móvil</th>
+=======
+									<th scope="row">Mobile Number</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									<td>:</td>
 									<td><input type="text" name="mobileNumber"
 										class="form-control" th:value="${user.mobileNumber}"></td>
 								</tr>
 								<tr>
+<<<<<<< HEAD
 									<th scope="row">Correo Electrónico</th>
+=======
+									<th scope="row">Email</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									<td>:</td>
 									<td><input type="text" name="" class="form-control"
 										readonly th:value="${user.email}"></td>
 								</tr>
 								<tr>
+<<<<<<< HEAD
 									<th scope="row">Dirección</th>
+=======
+									<th scope="row">Address</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									<td>:</td>
 									<td><input type="text" name="address" class="form-control"
 										th:value="${user.address}"></td>
 								</tr>
 								<tr>
+<<<<<<< HEAD
 									<th scope="row">Ciudad</th>
+=======
+									<th scope="row">City</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									<td>:</td>
 									<td><input type="text" name="city" class="form-control"
 										th:value="${user.city}"></td>
 								</tr>
 								<tr>
+<<<<<<< HEAD
 									<th scope="row">Estado</th>
+=======
+									<th scope="row">State</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									<td>:</td>
 									<td><input type="text" name="state" class="form-control"
 										th:value="${user.state}"></td>
 								</tr>
 								<tr>
+<<<<<<< HEAD
 									<th scope="row">Código Postal</th>
+=======
+									<th scope="row">Pincode</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									<td>:</td>
 									<td><input type="text" name="pincode" class="form-control"
 										th:value="${user.pincode}"></td>
 								</tr>
 								<tr>
+<<<<<<< HEAD
 									<th scope="row">Imagen</th>
+=======
+									<th scope="row">Image</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									<td>:</td>
 									<td><input type="file" name="img" class="form-control"
 										value=""></td>
 								</tr>
 								<tr>
+<<<<<<< HEAD
 									<th scope="row">Rol</th>
+=======
+									<th scope="row">Role</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									<td>:</td>
 									<td><input type="text" name="" class="form-control"
 										readonly th:value="${user.role}"></td>
 								</tr>
 								<tr>
+<<<<<<< HEAD
 									<th scope="row">Estado de la Cuenta</th>
+=======
+									<th scope="row">Account Status</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									<td>:</td>
 									<td><input type="text" name="" class="form-control"
 										readonly th:value="${user.isEnable}"> <input
@@ -98,7 +150,11 @@
 								<tr>
 									<td></td>
 									<td class="text-center">
+<<<<<<< HEAD
 										<button class="btn btn-sm bg-primary text-light">Actualizar</button>
+=======
+										<button class="btn btn-sm bg-primary text-light">Update</button>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									</td>
 								</tr>
 								</form>
@@ -111,33 +167,53 @@
 				<hr>
 				<div class="col-md-10 offset-md-1 mt-1">
 					<div class="row">
+<<<<<<< HEAD
 						<p class="text-center fs-3">Cambiar Contraseña</p>
+=======
+						<p class="text-center fs-3">Change Password</p>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 						<div class="col-md-6 offset-md-3">
 							<table class="table table-borderless">
 
 								<tbody>
 									<form action="/user/change-password" method="post">
 										<tr>
+<<<<<<< HEAD
 											<th scope="row">Contraseña Actual</th>
+=======
+											<th scope="row">Current Password</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 
 											<td><input type="text" name="currentPassword" class="form-control"></td>
 										</tr>
 
 										<tr>
+<<<<<<< HEAD
 											<th scope="row">Nueva Contraseña</th>
+=======
+											<th scope="row">New Password</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 
 											<td><input type="text" name="newPassword" class="form-control"></td>
 										</tr>
 
 										<tr>
+<<<<<<< HEAD
 											<th scope="row">Confirmar Contraseña</th>
+=======
+											<th scope="row">Confirm Password</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 
 											<td><input type="text" name="confirmPassword" class="form-control"></td>
 										</tr>
 										<tr>
 											<td></td>
 											<td class="text-center">
+<<<<<<< HEAD
 												<button class="btn btn-sm bg-primary text-light col-md-4">Actualizar</button>
+=======
+												<button class="btn btn-sm bg-primary text-light col-md-4">Update</button>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 											</td>
 
 										</tr>
@@ -152,6 +228,17 @@
 
 		</div>
 
+<<<<<<< HEAD
 	</section>
 </body>
 </html>
+=======
+
+
+
+
+
+	</section>
+</body>
+</html>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de

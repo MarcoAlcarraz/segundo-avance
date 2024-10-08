@@ -249,6 +249,7 @@ public class HomeController {
 		return "product";
 
 	}
+<<<<<<< HEAD
 	 @GetMapping("/furni")
 	    public String showFurniPage() {
 	        return "furni"; // Nombre de la vista que quieres retornar
@@ -277,5 +278,7 @@ public class HomeController {
 	    public String showContactPage() {
 	        return "contact"; // Nombre de la vista contact.html
 	    }
+=======
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 
 }

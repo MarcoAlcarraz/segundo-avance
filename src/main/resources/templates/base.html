@@ -20,7 +20,11 @@
 </head>
 <body>
 	<!-- Start Navbar  -->
+<<<<<<< HEAD
 	<nav class="navbar navbar-expand-lg  bg-success fixed-top navbar-dark">
+=======
+	<nav class="navbar navbar-expand-lg  bg-primary fixed-top navbar-dark">
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#"><i
 				class="fa-solid fa-cart-shopping"></i> FURMI</a>
@@ -36,6 +40,7 @@
 						<li class="nav-item"><a class="nav-link active"
 							aria-current="page" href="/"><i class="fa-solid fa-house"></i>
 								INICIO</a></li>
+<<<<<<< HEAD
 								
 					</th:block>
 					<li class="nav-item active">
@@ -46,6 +51,10 @@
 											<li><a class="nav-link" href="/services">Servicios</a></li>
 											<li><a class="nav-link" href="/blog">Blog</a></li>
 											<li><a class="nav-link" href="/contact">Contactanos</a></li>
+=======
+					</th:block>
+
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 					<th:block th:unless="${user==null}">
 						<li class="nav-item" th:if="${user.role=='ROLE_ADMIN'}"><a
 							class="nav-link active" aria-current="page" href="/admin/"><i
@@ -69,7 +78,11 @@
 								th:href="@{'/products?category='+${c.name}}">[[${c.name}]]</a></li>
 
 						</ul></li>
+<<<<<<< HEAD
                  
+=======
+
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 				</ul>
 
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -87,7 +100,11 @@
 						<th:block th:if="${user.role=='ROLE_USER'}">
 							<li class="nav-item"><a class="nav-link active"
 								aria-current="page" href="/user/cart"><i
+<<<<<<< HEAD
 									class="fa-solid fa-cart-shopping"></i> Carrito [ [[${countCart}]]
+=======
+									class="fa-solid fa-cart-shopping"></i> Cart [ [[${countCart}]]
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									]</a></li>
 						</th:block>
 						<li class="nav-item dropdown"><a

@@ -1,15 +1,27 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="es" xmlns:th="http://www.thymeleaf.org"
 	th:replace="~{base::layout(~{::section})}">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insertar título aquí</title>
+=======
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 </head>
 <body>
 	<section>
 		<div class="container mt-5 p-5">
 			<div class="row">
+<<<<<<< HEAD
 				<p class="text-center fs-3">Mis Pedidos</p>
+=======
+				<p class="text-center fs-3">My Orders</p>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 				<th:block th:if="${session.succMsg}">
 					<p class="text-success fw-bold text-center">[[${session.succMsg}]]</p>
 					<th:block th:text="${@commnServiceImpl.removeSessionMessage()}"></th:block>
@@ -24,12 +36,21 @@
 					<table class="table table-bordered card-sh">
 						<thead >
 							<tr >
+<<<<<<< HEAD
 								<th scope="col">ID de Pedido</th>
 								<th scope="col">Fecha</th>
 								<th scope="col">Detalles del Producto</th>
 								<th scope="col">Precio</th>
 								<th scope="col">Estado</th>
 								<th scope="col">Acción</th>
+=======
+								<th scope="col">Order Id</th>
+								<th scope="col">Date</th>
+								<th scope="col">Product Details</th>
+								<th scope="col">Price</th>
+								<th scope="col">Status</th>
+								<th scope="col">Action</th>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 							</tr>
 						</thead>
 						<tbody>
@@ -37,6 +58,7 @@
 								<th scope="row">[[${o.orderId}]]</th>
 								<td>[[${o.orderDate}]]</td>
 								<td>[[${o.product.title}]]</td>
+<<<<<<< HEAD
 								<td>Cantidad: [[${o.quantity}]] <br>Precio:
 									[[${o.price}]] <br>Precio Total: [[${o.quantity *
 									o.price}]]
@@ -47,6 +69,18 @@
 											class="btn btn-sm btn-danger">Cancelar</a>
 									</th:block> <th:block th:unless="${o.status!='Cancelado'}">
 										<a href="#" class="btn btn-sm btn-danger disabled" >Cancelar</a>
+=======
+								<td>Quantity : [[${o.quantity}]] <br>Price :
+									[[${o.price}]] <br>Total Price :[[${o.quantity *
+									o.price}]]
+								</td>
+								<td>[[${o.status}]]</td>
+								<td><th:block th:if="${o.status!='Cancelled'}">
+										<a th:href="@{'/user/update-status?id='+${o.id}+'&st=6' }"
+											class="btn btn-sm btn-danger">Cancel</a>
+									</th:block> <th:block th:unless="${o.status!='Cancelled'}">
+										<a href="#" class="btn btn-sm btn-danger disabled" >Cancel</a>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
 									</th:block></td>
 							</tr>
 						</tbody>
@@ -57,4 +91,8 @@
 		</div>
 	</section>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 8731299cd7288aed0dc6829e697d26ea0ac6c3de
